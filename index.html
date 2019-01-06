@@ -1,0 +1,31 @@
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>Vue.js</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <div id="app">
+    <button v-on:click="click">
+      Click!
+    </button>
+    <br>
+    <input type="text" v-model="message">
+    <p>
+      {{ message }}
+    </p>
+    <p v-show="toggle">
+      <a v-bind:href="url">{{ url }}</a>
+    </p>
+    <ol>
+      <li v-for="language in languages">{{ language }}</li>
+    </ol>
+  </div>
+  <!-- vue.jsはjsの上に記述する -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
